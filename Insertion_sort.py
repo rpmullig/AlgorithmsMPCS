@@ -9,6 +9,9 @@ for j = 2 to n
     A[i+1] = A[i]
     i = i - 1
    A[i+1] = key
+   
+Run time: O(n^2) : At worst case, an arithmetic series [n*(n-1)] / 2, or N^2
+Space time: O(1) : Constant as it scales
 '''
 
 def insertion_sort(arr):
