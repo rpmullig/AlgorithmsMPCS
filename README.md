@@ -3,9 +3,11 @@ Creating the Algorithms from Class
 
 ## Lecture
 
-* insertion-sort
-* merge-sort
+* insertion-sort algorithm
+* merge-sort algorithm
 
 ## Homework 1
-* local minimum in 1D array
-* local minimum in 2D matrix 
+* local minimum in 1D array algorithm
+* local minimum in 2D matrix algorithm
+### Do Problems
+* binary-search algorithm
