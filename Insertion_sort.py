@@ -1,6 +1,6 @@
 '''
 Pseudocode (note 1-based index)
-
+-------------------------------
 Insertiong-Sort(Arr,n) 
 for j = 2 to n
   key = A[j]
@@ -10,7 +10,6 @@ for j = 2 to n
     i = i - 1
    A[i+1] = key
 '''
-
 
 def insertion_sort(arr):
     for j in range(1, len(arr)):
