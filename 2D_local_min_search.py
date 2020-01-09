@@ -6,12 +6,15 @@ Assumption:
 '''
 def local_min_search_2D(arr):
     
-    row = m = (len(arr) - 1) // 2
-    col = n = (len(arr[0]) - 1) // 2
+    row = (len(arr) - 1)         # boundary check variable
+    col = (len(arr[0]) - 1)      # boundary check variable
     
-    current = up = down = left = right = arr[m][n]
+    m = (len(arr) - 1) // 2      # mid row
+    n = (len(arr[0]) - 1) // 2   # mid col
     
-    # increment directions, but only if possible 
+    current = up = down = left = right = arr[m][n]    # set everything to center
+    
+    # increment directions, but only if possible and not out of bounds 
     if m < row:
         up = arr[m+1][n]
     if m > 0:
@@ -37,7 +40,7 @@ def local_min_search_2D(arr):
             
         current = arr[m][n]
         
-        # increment directions, but only if possible 
+        # increment directions, but only if possible and not out of bounds 
         if m < row:
             up = arr[m+1][n]
         if m > 0:
