@@ -4,20 +4,22 @@ Returns the index of the target value of a sorted array input
 
 returns -1 if target is not in array 
 
+O(log_2 n) : recurrence = T(n/2)
+
 '''
 
 def binary_search(arr, target):
     l: int = 0 
     r: int = len(arr) - 1
     while r >= l:
-        mid = (l + r) // 2
+        mid = (l + r) // 2         # floor the value 
         if arr[mid] == target:
             return mid
         elif arr[mid] > target:
             r = mid - 1
         else:
             l = mid + 1
-    
+    # value is not in array
     return -1
     
     
