@@ -1,6 +1,8 @@
 ''' 
 Searches a 2D matrix and returns a local minimum (in the north, south, east,
 west directions). 
+Assumption:
+    There always exists a local minimum in a matrix
 '''
 
 def is_2D_local_min(arr, x, y):
@@ -22,8 +24,6 @@ def local_min_search_2D(arr):
         NE = arr[p * 3][q]
         SE = arr[p][q * 3]
         SW = arr[p * 3][q * 3]
-        
-        
         
         
         
