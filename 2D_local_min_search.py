@@ -12,13 +12,13 @@ def local_min_search_2D(arr):
     current = up = down = left = right = arr[m][n]
     
     # increment directions, but only if possible 
-    if m >= 0:
+    if m < row:
         up = arr[m+1][n]
-    if m <= row:
+    if m > 0:
         down = arr[m-1][n]
-    if n >= 0:
+    if n < col:
         left    = arr[m][n+1]
-    if n <= col:
+    if n > col:
         right = arr[m][n+1]
 
     while current > up or current > down or current > left or current > right:
@@ -38,13 +38,13 @@ def local_min_search_2D(arr):
         current = arr[m][n]
         
         # increment directions, but only if possible 
-        if m >= 0:
+        if m < row:
             up = arr[m+1][n]
-        if m <= row:
+        if m > 0:
             down = arr[m-1][n]
-        if n >= 0:
+        if n < col:
             left    = arr[m][n+1]
-        if n <= col:
+        if n > col:
             right = arr[m][n+1]
 
 
