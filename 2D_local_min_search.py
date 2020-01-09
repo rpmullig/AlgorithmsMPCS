@@ -37,16 +37,7 @@ def local_min_search_2D(arr):
             
         current = arr[m][n]
         
-        # increment directions, but only if possible         directions_v = [NW, NE, SE, SW] 
-        directions_c = [[p, q],[p*3,q],[p,q*3],[p*3,q*3]] 
-        
-        i = 0
-        for j in range(1, 4):
-            if directions[i] < tmp:
-                i = j
-        
-        m = directions_c[i][0]
-        n = directions_c[i][1]
+        # increment directions, but only if possible 
         if m >= 0:
             up = arr[m+1][n]
         if m <= row:
