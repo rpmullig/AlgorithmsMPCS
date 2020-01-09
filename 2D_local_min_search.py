@@ -4,28 +4,40 @@ west directions).
 Assumption:
     There always exists a local minimum in a matrix
 '''
-
-def is_2D_local_min(arr, x, y):
-    if x > 0 and y > 0:
-        return arr[x][y] <= arr[x+1][y] and arr[x][y] <= arr[x-1][y] and arr[x][y] <= arr[x][y+1] and arr[x][y] <= arr[x][y-1]
-    
-
 def local_min_search_2D(arr):
     
-    m: int = len(arr) - 1
-    n: int = len(arr[0]) - 1
-   
-    while is_2D_local_min(arr, m, n) is False:
-        p = m // 4
-        q = n // 4 
+    row = m = (len(arr) - 1) // 2
+    col = n = (len(arr[0]) - 1) // 2
+    
+    current = up = down = left = right = arr[m][n]
+    
+    # increment directions, but only if possible 
+    if m >= 0:
+        up = arr[m+1][n]
+    if m <= row:
+        down = arr[m-1][n]
+    if n >= 0:
+        left    = arr[m][n+1]
+    if n <= col:
+        right = arr[m][n+1]
 
-        # check the diagonals 
-        NW = tmp = arr[p][q]
-        NE = arr[p * 3][q]
-        SE = arr[p][q * 3]
-        SW = arr[p * 3][q * 3]
+    while current > up or current > down or current > left or current > right:
         
-        directions_v = [NW, NE, SE, SW] 
+        directions_val  = [up, down, left, right] 
+        directions_cord = [[m+1, n],[m-1,n],[m,n+1],[m, n-1]] 
+        
+        i = 0
+        tmp = up
+        for j in range(2, 4):
+            if directions[i] < tmp:
+                i = j
+        
+        m = directions_c[i][0]
+        n = directions_c[i][1]    
+            
+        current = arr[m][n]
+        
+        # increment directions, but only if possible         directions_v = [NW, NE, SE, SW] 
         directions_c = [[p, q],[p*3,q],[p,q*3],[p*3,q*3]] 
         
         i = 0
@@ -35,7 +47,16 @@ def local_min_search_2D(arr):
         
         m = directions_c[i][0]
         n = directions_c[i][1]
-    
+        if m >= 0:
+            up = arr[m+1][n]
+        if m <= row:
+            down = arr[m-1][n]
+        if n >= 0:
+            left    = arr[m][n+1]
+        if n <= col:
+            right = arr[m][n+1]
+
+
     return (m, n)
 
     
