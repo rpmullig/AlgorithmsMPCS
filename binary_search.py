@@ -7,7 +7,6 @@ returns -1 if target is not in array
 O(log_2 n) : recurrence = T(n/2)
 
 '''
-
 def binary_search(arr, target):
     l: int = 0 
     r: int = len(arr) - 1
@@ -21,7 +20,6 @@ def binary_search(arr, target):
             l = mid + 1
     # value is not in array
     return -1
-    
     
 # examples
 print(binary_search([1, 3, 5, 6, 7, 100], 3)) # returns 1
