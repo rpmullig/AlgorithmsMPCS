@@ -2,6 +2,11 @@
 Searches a 2D matrix and returns a local minimum (in the north, south, east,
 west directions). 
 '''
+
+def is_2D_local_min(arr, x, y):
+    return arr[x][y] <= arr[x+1][y] and arr[x][y] <= arr[x-1][y] and arr[x][y] <= arr[x][y+1] and arr[x][y] <= arr[x][y-1]
+
+
 def 2D_local_min_search(arr):
    
    m: int = len(arr) - 1
@@ -24,9 +29,6 @@ def 2D_local_min_search(arr):
         
     return (m, n)
     
-    
-def is_2D_local_min(arr, x, y):
-    return arr[x][y] <= arr[x+1][y] and arr[x][y] <= arr[x-1][y] and arr[x][y] <= arr[x][y+1] and arr[x][y] <= arr[x][y-1]
 
     
 print(2D_local_min_search([[4, 5, 10, 19], [10, 2, 100, 300], [30, 40, 50, 600]]) 
