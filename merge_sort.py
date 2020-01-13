@@ -34,7 +34,7 @@ Merge(A, p, q, r)
 Recurrence: O(n) + 2*T(n/2), using master's theorem 
 
 Run time: O(n log n)
-Space time: O(n^2)
+Space time: O(n)
 '''
 
 import math
