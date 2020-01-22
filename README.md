@@ -3,7 +3,7 @@ Creating the Algorithms from Class
 
 ## Relevant Leet Code Problems
 * Insertion Sort
-** https://leetcode.com/problems/insertion-sort-list/
+  * https://leetcode.com/problems/insertion-sort-list/
 * Merge Sort
 ** https://leetcode.com/problems/merge-two-sorted-lists/
 * Quick Sort
