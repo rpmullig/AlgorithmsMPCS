@@ -5,14 +5,14 @@ Creating the Algorithms from Class
 * Insertion Sort
   * https://leetcode.com/problems/insertion-sort-list/
 * Merge Sort
- * https://leetcode.com/problems/merge-two-sorted-lists/
+  * https://leetcode.com/problems/merge-two-sorted-lists/
 * Quick Sort
- * https://leetcode.com/problems/sort-an-array/ (or any sorting algorithm) 
- * https://leetcode.com/problems/kth-largest-element-in-an-array/ (related, very important) 
+  * https://leetcode.com/problems/sort-an-array/ (or any sorting algorithm) 
+  * https://leetcode.com/problems/kth-largest-element-in-an-array/ (related, very important) 
 * Maximum Subarray
- * https://leetcode.com/problems/maximum-subarray/ (in book) 
+  * https://leetcode.com/problems/maximum-subarray/ (in book) 
 * Binary Search
- * https://leetcode.com/problems/binary-search/
+  * https://leetcode.com/problems/binary-search/
 
 
 
