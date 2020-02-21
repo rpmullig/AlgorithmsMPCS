@@ -19,7 +19,7 @@ Merge(A, p, q, r)
   for j to n_2
     R[j] = A[q+j]
   L[n_1 + 1] = math.infinity (sentenel value) 
-  R[n_1 + 1] = math.infinity (sentenenl value) 
+  R[n_2 + 1] = math.infinity (sentenenl value) 
   
   i = 1 
   j = 1 
